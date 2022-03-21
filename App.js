@@ -1,20 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Button, Text } from "react-native";
+const Stack = createNativeStackNavigator();
 
-export default function App() {
+const App = () => {
+  // return <NavigationContainer>{MyStack}</NavigationContainer>;
   return (
-    <View style={styles.container}>
-      <Text>Hello</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen
+          name='Home'
+          component={HomeScreen}
+          options={{ title: "Welcome" }}
+        />
+        <Stack.Screen name='Onboarding' component={OnBoardingScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const HomeScreen = ({ navigation }) => {
+  return (
+    <Button
+      title='Hello'
+      onPress={() => navigation.navigate("Profile", { name: "Jane" })}
+    />
+  );
+};
+
+const OnBoardingScreen = ({ navigation, route }) => {
+  return <Text>Onboarding Screen</Text>;
+};
+
+export default App;
