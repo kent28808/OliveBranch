@@ -1,5 +1,13 @@
-import { Text } from "react-native";
+import { Text, Button } from "react-native";
 
 export default function cStatementtemplate({ navigation, route }) {
-  return <Text>Commitment statement template</Text>;
+  return (
+    <>
+      <Text>Premature Cody #3 Committment Statement Template</Text>
+      <Button
+        title='Next'
+        onPress={() => navigation.navigate("Statement(Optional Audio)")}
+      />
+    </>
+  );
 }

@@ -5,8 +5,12 @@ export default function CheckCommitScreen({ navigation, route }) {
     <>
       <Text>CheckCommitScreen Screen</Text>
       <Button
-        title='Next Page'
+        title='Yep'
         onPress={() => navigation.navigate("CheckCommitmentNow")}
+      />
+       <Button
+        title='Nahh'
+        onPress={() => navigation.navigate("NoStatement")}
       />
     </>
   );
