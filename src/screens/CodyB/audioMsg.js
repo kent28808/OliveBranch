@@ -1,5 +1,13 @@
-import { Text } from "react-native";
+import { Text, Button } from "react-native";
 
 export default function audioMsg({ navigation, route }) {
-  return <Text>audiomsg</Text>;
+  return (
+    <>
+      <Text>Premature Cody #5 Audio/message confirmation.</Text>
+      <Button
+        title='Next'
+        onPress={() => navigation.navigate("User Info + Send")}
+      />
+    </>
+  );
 }

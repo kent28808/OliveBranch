@@ -1,5 +1,13 @@
-import { Text } from "react-native";
+import { Text, Button } from "react-native";
 
 export default function AudioRecordScreen({ navigation, route }) {
-  return <Text>User Can Record Audio Message Screen</Text>;
+  return (
+    <>
+      <Text>Committed Cody #2 User can record audio message screen.</Text>
+      <Button
+        title='Next'
+        onPress={() => navigation.navigate("RecordingConfirmation")}
+      />
+    </>
+  );
 }

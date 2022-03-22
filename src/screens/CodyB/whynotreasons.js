@@ -1,5 +1,13 @@
-import { Text } from "react-native";
+import { Text, Button } from "react-native";
 
 export default function whynotreasons({ navigation, route }) {
-  return <Text>whynotreasons</Text>;
+  return (
+    <>
+      <Text>Premature Cody #1 Why not reasons.</Text>
+      <Button
+        title='Next'
+        onPress={() => navigation.navigate("Timer")}
+      />
+    </>
+  );
 }
