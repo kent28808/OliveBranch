@@ -1,5 +1,13 @@
-import { Text } from "react-native";
+import { Text, Button } from "react-native";
 
 export default function CheckCommitNowScreen({ navigation, route }) {
-  return <Text>Check Commitment Now Screen</Text>;
+  return (
+    <>
+      <Text>CheckCommitNow Screen</Text>
+      <Button
+        title='Next Page'
+        onPress={() => navigation.navigate("CommitmentTemplate")}
+      />
+    </>
+  );
 }

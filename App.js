@@ -16,9 +16,6 @@ import audioMsg from "./src/screens/CodyB/audioMsg";
 import Userinfosend from "./src/screens/Userinfosend";
 import finalConfirmation from "./src/screens/finalConfirmation";
 
-
-
-
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -33,20 +30,32 @@ const App = () => {
         <Stack.Screen name='Onboarding' component={OnBoardingScreen} />
         <Stack.Screen name='CheckCommitment' component={CheckCommitScreen} />
         {/* Triage Screen */}
-        <Stack.Screen name='CheckCommitmentNow'component={CheckCommitNowScreen}/>
+        <Stack.Screen
+          name='CheckCommitmentNow'
+          component={CheckCommitNowScreen}
+        />
         {/* CodyA */}
-        <Stack.Screen name='CommitmentTemplate'component={CommitTemplateScreen}/>
+        <Stack.Screen
+          name='CommitmentTemplate'
+          component={CommitTemplateScreen}
+        />
         <Stack.Screen name='AudioRecording' component={AudioRecordScreen} />
-        <Stack.Screen name='RecordingConfirmation'component={RecordingConfirmScreen}/>
+        <Stack.Screen
+          name='RecordingConfirmation'
+          component={RecordingConfirmScreen}
+        />
         {/* CodyB */}
-        <Stack.Screen name='Whynotreasons'component={whynotreasons}/>
-        <Stack.Screen name='Timer'component={timer}/>
-        <Stack.Screen name='CommitmentStatementTemplate'component={cStatementtemplate}/>
-        <Stack.Screen name='Statement(Optional Audio)'component={cStatement}/>
-        <Stack.Screen name='AudioMessage'component={audioMsg}/>
+        <Stack.Screen name='Whynotreasons' component={whynotreasons} />
+        <Stack.Screen name='Timer' component={timer} />
+        <Stack.Screen
+          name='CommitmentStatementTemplate'
+          component={cStatementtemplate}
+        />
+        <Stack.Screen name='Statement(Optional Audio)' component={cStatement} />
+        <Stack.Screen name='AudioMessage' component={audioMsg} />
         {/* Codys End */}
-        <Stack.Screen name='User Info + Send'component={Userinfosend}/>
-        <Stack.Screen name='Final Confirmation'component={finalConfirmation}/>
+        <Stack.Screen name='User Info + Send' component={Userinfosend} />
+        <Stack.Screen name='Final Confirmation' component={finalConfirmation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
