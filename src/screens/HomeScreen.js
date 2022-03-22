@@ -1,10 +1,13 @@
-import { Button } from "react-native";
+import { Text, Button } from "react-native";
 
 export default function HomeScreen({ navigation }) {
   return (
-    <Button
-      title='Hello'
-      onPress={() => navigation.navigate("Onboarding", { name: "Jane" })}
-    />
+    <>
+      <Text>Home Screen</Text>
+      <Button
+        title='Next Page'
+        onPress={() => navigation.navigate("Onboarding")}
+      />
+    </>
   );
 }
