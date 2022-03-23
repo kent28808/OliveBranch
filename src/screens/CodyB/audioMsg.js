@@ -1,6 +1,6 @@
 import { Text, Button } from "react-native";
 
-export default function audioMsg({ navigation, route }) {
+export default function AudioMsg({ navigation, route }) {
   return (
     <>
       <Text>Premature Cody #5 Audio/message confirmation.</Text>

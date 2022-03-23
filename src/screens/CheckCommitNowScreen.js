@@ -8,9 +8,9 @@ export default function CheckCommitNowScreen({ navigation, route }) {
         title='Yes'
         onPress={() => navigation.navigate("CommitmentTemplate")}
       />
-       <Button
+      <Button
         title='Nahh'
-        onPress={() => navigation.navigate("Whynotreasons")}
+        onPress={() => navigation.navigate("WhyNotReasons")}
       />
     </>
   );

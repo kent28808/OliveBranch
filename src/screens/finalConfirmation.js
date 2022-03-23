@@ -1,5 +1,5 @@
 import { Text } from "react-native";
 
-export default function finalConfirmation({ navigation, route }) {
-  return <Text>finalConfirmation</Text>;
+export default function FinalConfirmation({ navigation, route }) {
+  return <Text>FinalConfirmation</Text>;
 }
