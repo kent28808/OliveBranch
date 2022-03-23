@@ -9,14 +9,13 @@ import CheckCommitNowScreen from "./src/screens/CheckCommitNowScreen";
 import CommitTemplateScreen from "./src/screens/CodyA/CommitTemplateScreen";
 import AudioRecordScreen from "./src/screens/CodyA/AudioRecordScreen";
 import RecordingConfirmScreen from "./src/screens/CodyA/RecordingConfirmScreen";
-import whynotreasons from "./src/screens/CodyB/whynotreasons";
-import timer from "./src/screens/CodyB/timer";
-import cStatementtemplate from "./src/screens/CodyB/cStatementtemplate";
-import cStatement from "./src/screens/CodyB/cStatement";
-import audioMsg from "./src/screens/CodyB/audioMsg";
+import WhyNotReasons from "./src/screens/CodyB/WhyNotReasons";
+import Timer from "./src/screens/CodyB/Timer";
+import CStatementTemplate from "./src/screens/CodyB/CStatementTemplate";
+import CStatement from "./src/screens/CodyB/CStatement";
+import AudioMsg from "./src/screens/CodyB/AudioMsg";
 import Userinfosend from "./src/screens/Userinfosend";
-import finalConfirmation from "./src/screens/finalConfirmation";
-
+import FinalConfirmation from "./src/screens/FinalConfirmation";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,26 +23,42 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
-        <Stack.Screen name='Home' component={HomeScreen} options={{ title: "Welcome" }}/>
+        <Stack.Screen
+          name='Home'
+          component={HomeScreen}
+          options={{ title: "Welcome" }}
+        />
         <Stack.Screen name='Onboarding' component={OnBoardingScreen} />
         {/* Triage Screen */}
         <Stack.Screen name='CheckCommitment' component={CheckCommitScreen} />
         <Stack.Screen name='NoStatement' component={NoStatement} />
         {/* Triage Screen */}
-        <Stack.Screen name='CheckCommitmentNow'component={CheckCommitNowScreen}/>
+        <Stack.Screen
+          name='CheckCommitmentNow'
+          component={CheckCommitNowScreen}
+        />
         {/* CodyA */}
-        <Stack.Screen name='CommitmentTemplate'component={CommitTemplateScreen}/>
+        <Stack.Screen
+          name='CommitmentTemplate'
+          component={CommitTemplateScreen}
+        />
         <Stack.Screen name='AudioRecording' component={AudioRecordScreen} />
-        <Stack.Screen name='RecordingConfirmation'component={RecordingConfirmScreen}/>
+        <Stack.Screen
+          name='RecordingConfirmation'
+          component={RecordingConfirmScreen}
+        />
         {/* CodyB */}
-        <Stack.Screen name='Whynotreasons' component={whynotreasons} />
-        <Stack.Screen name='Timer' component={timer} />
-        <Stack.Screen name='CommitmentStatementTemplate'component={cStatementtemplate}/>
-        <Stack.Screen name='Statement(Optional Audio)' component={cStatement} />
-        <Stack.Screen name='AudioMessage' component={audioMsg} />
+        <Stack.Screen name='WhyNotReasons' component={WhyNotReasons} />
+        <Stack.Screen name='Timer' component={Timer} />
+        <Stack.Screen
+          name='CommitmentStatementTemplate'
+          component={CStatementTemplate}
+        />
+        <Stack.Screen name='Statement(Optional Audio)' component={CStatement} />
+        <Stack.Screen name='AudioMessage' component={AudioMsg} />
         {/* Codys End */}
         <Stack.Screen name='User Info + Send' component={Userinfosend} />
-        <Stack.Screen name='Final Confirmation' component={finalConfirmation} />
+        <Stack.Screen name='Final Confirmation' component={FinalConfirmation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
